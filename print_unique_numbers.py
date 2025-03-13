@@ -8,7 +8,12 @@ for i in range(10):
     num = input(f"Enter number {i + 1}: ")
     num_list.append(num)
 
-print(num_list)
 # Find numbers that dont have duplicate from the list
+unique_list = []
+
+for num in num_list: 
+    if num_list.count(num) == 1:
+        unique_list.append(num)
 
 # print the numbers that dont have duplicate
+print(unique_list)
