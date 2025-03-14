@@ -1,17 +1,14 @@
-# Prog04: Create a program that ask user to input a number, continue asking until the user input is invalid. 
-# Display the lowest number
+num_list = []
 
-# Create loop that keeps asking users to input number
 while True:
     try:
         num = int(input("Enter a number: "))
-
+        num_list.append(num)
     except ValueError:
-        print("Invalid input. Stopping program.")
-        break
-    
-# Create list to store numbers
+        break  # Stop asking when input is invalid
 
-# Stop if the input is invalid
+if num_list:
+    print("Lowest number:", min(num_list))
+else:
+    print("No valid numbers were entered.")
 
-# Display lowest number from list

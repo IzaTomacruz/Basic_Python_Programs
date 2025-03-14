@@ -1,19 +1,18 @@
-# Prog02: Create a program that ask user to input 10 numbers. Display all numbers. 
-# For numbers with duplicate, display only the first entry.
-
-# Create a list where we will store our numbers
 num_list = []
 
-# Ask users to input 10 numbers
 for i in range(10):
     num = input(f"Enter number {i + 1}: ")
     num_list.append(num)
 
-print(num_list)
+unique_list = []
+duplicate = set()
 
-# Check each numbers from the list if it is unique or duplicated
-
-# Print the final list with only the first entry of the number
+for num in num_list:
+    if num not in duplicate:
+        unique_list.append(num)
+        duplicate.add(num)
+    
+print("All numbers entered:", unique_list)
 
 
 

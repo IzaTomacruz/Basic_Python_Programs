@@ -10,4 +10,7 @@ for num in num_list:
     if num_list.count(num) == 1:
         unique_list.append(num)
 
-print(unique_list)
+if unique_list:
+    print("All unique numbers: ",unique_list)
+else:
+    print("No unique numbers are inputed")
