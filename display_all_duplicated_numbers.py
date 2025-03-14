@@ -1,11 +1,13 @@
-# Prog01: Create a program that ask user to input 10 numbers. Display all numbers that have duplicate.
+num_list = []
 
-# Ask users to input 10 numbers
+for i in range(10):
+    num = input(f"Enter number {i + 1}: ")
+    num_list.append(num)
 
-# Create a list where we will store our numbers
+duplicate_list = set()
 
-# Find numbers that have duplicate from the list
+for num in num_list:
+    if num_list.count(num) > 1:
+        duplicate_list.add(num)
 
-# print the numbers that have duplicate
-
-
+print("Numbers with duplicates:", duplicate_list)

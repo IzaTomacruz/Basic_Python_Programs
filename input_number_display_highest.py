@@ -1,12 +1,15 @@
-# Prog03: Create a program that ask user to input a number, continue asking until the user input is invalid. 
-# Display the highest number
+num_list = []
 
-# Create a list where we will store our numbers
+while True:
+    try:
+        num = int(input("Enter a number: "))
+        num_list.append(num)
 
-# Create loop that keeps asking users to input number
+    except ValueError:
+        break
 
-# find highest number 
+if num_list:
+    print("Highest number:", max(num_list))
+else:
+    print("No valid numbers were entered.")
 
-# Stop if the input is invalid
-
-# Print the highes number 

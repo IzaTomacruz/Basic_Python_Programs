@@ -1,12 +1,15 @@
-# Prog04: Create a program that ask user to input a number, continue asking until the user input is invalid. 
-# Display the number from highest to lowest. Clue: sort() function
+num_list = []
 
-# Create loop that keeps asking users to input number
+while True:
+    try:
+        num = int(input("Enter a number: "))
+        num_list.append(num)
 
-# Create list to store numbers
+    except ValueError:
+        break
 
-# Stop if the input is invalid
-
-# Display arrangement numbers from list from highest to lowest
-
-# Calculate the average and print
+if num_list:
+    num_list.sort(reverse = True)
+    print("Numbers from highest to lowest:", num_list)
+else:
+    print("No valid numbers were entered.")

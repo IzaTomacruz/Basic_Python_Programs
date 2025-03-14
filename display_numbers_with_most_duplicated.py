@@ -1,13 +1,15 @@
-# Prog02: Create a program that ask user to input a number, continue asking until the user input is invalid. 
-# Display the number with the most number of duplicate.
+num_list = []
 
+while True:
+    try:
+        num = int(input("Enter a number: "))
+        num_list.append(num)
 
-# Create a list where we will store our numbers
+    except ValueError:
+        break
 
-# Create loop that keeps asking users to input number
+if num_list:
+    print("Number with most duplicates:", max(set(num_list), key = num_list.count))
+else:
+    print("No valid numbers were entered.")
 
-# find number with most duplicates
-
-# Stop if the input is invalid
-
-# Print the number with the most duplicates
