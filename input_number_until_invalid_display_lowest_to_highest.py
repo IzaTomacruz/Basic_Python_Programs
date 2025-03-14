@@ -3,7 +3,14 @@
 
 
 # Create loop that keeps asking users to input number
+while True:
+    try:
+        num = int(input("Enter a number: "))
 
+    except ValueError:
+        print("Invalid input. Stopping program.")
+        break
+    
 # Create list to store numbers
 
 # Stop if the input is invalid
